@@ -1,0 +1,9 @@
+.venus-slider {position: relative; overflow: hidden; margin: 0 auto;}
+.venus-slider, .venus-slider * {margin: 0 auto; padding: 0;}
+.venus-slider li {list-style-type: none;}
+.venus-slider ul {/*overflow: hidden;*/ position: absolute; left: 0; top: 0;}
+.venus-slider ul li {float: left;}
+
+.venus-slider ol {position: absolute; bottom: 10px; right: 10px;}
+.venus-slider ol li {float: left; width: 10px; height: 10px; line-height: 10px; text-align: center; background-color: transparent; color: transparent; margin-right: 3px; cursor: pointer; border: 1px solid gray; border-radius: 6px;}
+.venus-slider ol li.current {background-color: #0D1E0B; color: #000;}
