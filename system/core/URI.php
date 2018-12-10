@@ -211,7 +211,9 @@ class CI_URI {
 		{
 			if (strpos($uri, $_SERVER['SCRIPT_NAME']) === 0)
 			{
-				//var_dump($uri);var_dump($_SERVER['SCRIPT_NAME']);exit;
+				if (substr($_SERVER['SCRIPT_NAME'], -4) != '.php') {
+					var_dump($uri);var_dump($_SERVER['SCRIPT_NAME']);exit;
+				}
 				$uri = (string) substr($uri, strlen($_SERVER['SCRIPT_NAME']));
 
 			}
