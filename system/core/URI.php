@@ -98,7 +98,6 @@ class CI_URI {
 	 */
 	public function __construct()
 	{
-		echo 123;exit;
 		$this->config =& load_class('Config', 'core');
 
 		// If query strings are enabled, we don't need to parse any segments.
@@ -121,6 +120,7 @@ class CI_URI {
 				{
 					case 'AUTO': // For BC purposes only
 					case 'REQUEST_URI':
+					echo 456;exit;
 						$uri = $this->_parse_request_uri();
 						break;
 					case 'QUERY_STRING':
