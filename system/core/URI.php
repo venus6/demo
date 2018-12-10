@@ -120,7 +120,6 @@ class CI_URI {
 				{
 					case 'AUTO': // For BC purposes only
 					case 'REQUEST_URI':
-					echo 456;exit;
 						$uri = $this->_parse_request_uri();
 						break;
 					case 'QUERY_STRING':
@@ -207,7 +206,7 @@ class CI_URI {
 		$uri = parse_url('http://dummy'.$_SERVER['REQUEST_URI']);
 		$query = isset($uri['query']) ? $uri['query'] : '';
 		$uri = isset($uri['path']) ? $uri['path'] : '';
-
+var_dump($uri);exit;
 		if (isset($_SERVER['SCRIPT_NAME'][0]))
 		{
 			if (strpos($uri, $_SERVER['SCRIPT_NAME']) === 0)
