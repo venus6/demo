@@ -6,6 +6,7 @@
 <meta name="keywords" content="<?php echo $this->config->item('view')['seo']['key']; ?>">
 <meta name="description" content="<?php echo $this->config->item('view')['seo']['desc']; ?>">
 
+<link rel="icon" href="data:;base64,=">
 <link rel="stylesheet" href="<?php echo $this->config->item('public_url'); ?>css/reset.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="<?php echo $this->config->item('public_url'); ?>css/front.css" type="text/css" media="screen, projection" />
 
