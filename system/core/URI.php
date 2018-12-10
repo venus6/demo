@@ -206,9 +206,9 @@ class CI_URI {
 		$uri = parse_url('http://dummy'.$_SERVER['REQUEST_URI']);
 		$query = isset($uri['query']) ? $uri['query'] : '';
 		$uri = isset($uri['path']) ? $uri['path'] : '';
-var_dump($uri);exit;
+
 		if (isset($_SERVER['SCRIPT_NAME'][0]))
-		{
+		{var_dump($_SERVER['SCRIPT_NAME'][0]);exit;
 			if (strpos($uri, $_SERVER['SCRIPT_NAME']) === 0)
 			{
 				$uri = (string) substr($uri, strlen($_SERVER['SCRIPT_NAME']));
