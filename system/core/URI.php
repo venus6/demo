@@ -208,10 +208,11 @@ class CI_URI {
 		$uri = isset($uri['path']) ? $uri['path'] : '';
 
 		if (isset($_SERVER['SCRIPT_NAME'][0]))
-		{var_dump($_SERVER['SCRIPT_NAME'][0]);exit;
+		{
 			if (strpos($uri, $_SERVER['SCRIPT_NAME']) === 0)
 			{
 				$uri = (string) substr($uri, strlen($_SERVER['SCRIPT_NAME']));
+				var_dump($uri);exit;
 			}
 			elseif (strpos($uri, dirname($_SERVER['SCRIPT_NAME'])) === 0)
 			{
