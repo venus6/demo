@@ -217,7 +217,6 @@ class CI_URI {
 			elseif (strpos($uri, dirname($_SERVER['SCRIPT_NAME'])) === 0)
 			{
 				$uri = (string) substr($uri, strlen(dirname($_SERVER['SCRIPT_NAME'])));
-				var_dump($uri);exit;
 			}
 		}
 
