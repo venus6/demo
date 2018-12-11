@@ -35,7 +35,7 @@ $config['base_url'] = 'http://demo.yzjktech.com/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'vadmin.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
