@@ -98,7 +98,7 @@ switch (ENVIRONMENT)
  * Set the path if it is not in the same directory as this file.
  */
 
-	$system_path = 'system';
+	$system_path = '../system';
 
 /*
  *---------------------------------------------------------------
@@ -115,7 +115,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$common_app_folder = 'application';	// add by venus
+	$common_app_folder = '../application';	// add by venus
 	$application_folder = $common_app_folder . '/admin';
 
 /*
