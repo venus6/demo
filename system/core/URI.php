@@ -195,7 +195,7 @@ class CI_URI {
 	 * @return	string
 	 */
 	protected function _parse_request_uri()
-	{
+	{echo 12;exit;
 		if ( ! isset($_SERVER['REQUEST_URI'], $_SERVER['SCRIPT_NAME']))
 		{
 			return '';
@@ -211,7 +211,6 @@ class CI_URI {
 		{
 			if (strpos($uri, $_SERVER['SCRIPT_NAME']) === 0)
 			{
-				var_dump($uri);var_dump($_SERVER['SCRIPT_NAME']);exit;
 				$uri = (string) substr($uri, strlen($_SERVER['SCRIPT_NAME']));
 
 			}
