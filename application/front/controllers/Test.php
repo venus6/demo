@@ -44,7 +44,7 @@ class Test extends CI_Controller {
     }
 
     public function two() {
-        echo base_url();exit;
+        echo base_url("test/two/2");exit;
         echo site_url("test/two/2");
     }
 
