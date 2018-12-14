@@ -80,7 +80,7 @@ $db['default'] = array(
 	'password' => 'test123',
 	'database' => 'demo_ci',
 	'dbdriver' => 'mysqli',
-	'dbprefix' => 'jk_',
+	'dbprefix' => 'ce_',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,

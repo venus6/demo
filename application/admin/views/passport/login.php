@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>扬州捷科科技有限公司 - 管理后台</title>
+        <title>上海芯茂电子科技有限公司 - 管理后台</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <link rel="stylesheet" href="<?php echo $this->config->item('public_url'); ?>css/reset.css" type="text/css" />
@@ -10,7 +10,7 @@
     </head>
     <body style="background-color: #252639;">
         <div id="login_div">
-            <h1>扬州捷科科技有限公司</h1>
+            <h1>上海芯茂电子科技有限公司</h1>
             <?php if ($flag == 1): ?>
             <div class="message">
                 <strong>恭喜</strong>，您已成功退出！
