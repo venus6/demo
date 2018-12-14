@@ -46,6 +46,7 @@ class Test extends CI_Controller {
     public function two() {
         echo base_url("test/two/2");exit;
         echo site_url("test/two/2");
+        echo "我的";
     }
 
     /* 此功能用于 临时多版本时，又不想修改原来的方法，可以再写一个方法，把URI第二段指向这个新方法，而又不用修改页面中的链接。
