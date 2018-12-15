@@ -63,8 +63,19 @@ class Content_model extends CI_Model {
         return $rs;
     }
 
+    public function get_list_by_type_id_limit($type_id, $limit){
+        $query = $this->db->query("select * from {$this->db->dbprefix('content')} where type_id='{$type_id}' order by sort limit 0," . $limit);
+        $rs = $query->result_array();
+        return $rs;
+    }
+
     public function add_click_count($id) {
         $query = $this->db->query("update {$this->db->dbprefix('content')} set click_count=click_count+1 where id={$id}");
+        return $query;
+    }
+
+    public function add_download_count($id) {
+        $query = $this->db->query("update {$this->db->dbprefix('content')} set download_count=download_count+1 where id={$id}");
         return $query;
     }
 }
