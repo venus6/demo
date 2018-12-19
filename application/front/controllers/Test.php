@@ -37,30 +37,8 @@ class Test extends CI_Controller {
     }
 
     public function one() {
-        $this->output->enable_profiler(TRUE);
-        if (is_php('7.1')) {
-            echo 'one2';
-        }
-    }
-
-    public function two() {
-        $str = realpath_cache_size();
-        var_dump($str);
-    }
-
-    /* 此功能用于 临时多版本时，又不想修改原来的方法，可以再写一个方法，把URI第二段指向这个新方法，而又不用修改页面中的链接。
-    public function _remap($method) {
-        if ($method === 'index') {
-            $this->one();
-        } else {
-            $this->index();
-        }
-    }
-    */
-
-    public function back_json() {
-        $arr = array('one', 'two', 'three');
-        echo json_encode($arr);
+        $data = array();
+        $this->load->view('test/layui', $data);
     }
 
     public function redis() {
