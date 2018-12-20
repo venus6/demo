@@ -41,6 +41,11 @@ class Test extends CI_Controller {
         $this->load->view('test/layui', $data);
     }
 
+    public function two() {
+        $data = array();
+        $this->load->view('test/two', $data);
+    }
+
     public function redis() {
         $redis = new Redis();
         $redis->connect('127.0.0.1', 6379);
