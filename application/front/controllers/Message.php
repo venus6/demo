@@ -21,6 +21,7 @@ class Message extends CI_Controller {
 
         if ($this->input->method() == 'post') {
             $post_arr = $this->input->post(array('name', 'tel', 'email', 'content'));
+            var_dump($post_arr);exit;
             if (trim($post_arr['name']) == '') {
                 v_show_tips(0, '客户名/联系人不能为空！');
             }

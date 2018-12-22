@@ -12,7 +12,12 @@
         <script src="<?php echo $this->config->item('public_url'); ?>layui/layui.js"></script>
         <script>
             $(document).ready(function() {
-                alert(12)
+                $('body').on('click', '#test', function (e) {
+                    $.post('<?php echo site_url("test/do_two"); ?>', {name: 'venus', sex: 1}, function (data) {
+                        console.log(data);
+                    }, 'text');
+                });
+
             });
         </script>
     </head>

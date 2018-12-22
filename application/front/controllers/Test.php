@@ -46,6 +46,14 @@ class Test extends CI_Controller {
         $this->load->view('test/two', $data);
     }
 
+    public function do_two() {
+        echo 12;exit;
+        var_dump($_POST);exit;
+        $something = $this->input->get('f');
+        $something = $this->security->xss_clean($something);
+        echo $something;exit;
+    }
+
     public function redis() {
         $redis = new Redis();
         $redis->connect('127.0.0.1', 6379);

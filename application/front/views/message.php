@@ -7,9 +7,9 @@
         <div class="message">
             <form id="submit_form" method="post" action="" >
                 <label class="form_title" for="name">客户名/联系人 <span class="required">*</span></label>
-                <input type="text" name="name" id="name" size="50" maxlength="50" />
+                <input type="text" name="name" id="name" size="50" maxlength="50" value="venus" />
                 <label class="form_title" for="tel">手机/电话 <span class="required">*</span></label>
-                <input type="text" name="tel" id="tel" size="50" maxlength="50" />
+                <input type="text" name="tel" id="tel" size="50" maxlength="50" value="15986562233" />
                 <label class="form_title" for="email">Email</label>
                 <input type="text" name="email" id="email" size="50" maxlength="100" />
                 <label class="form_title" for="content">您对我们的留言 <span class="required">*</span></label>
