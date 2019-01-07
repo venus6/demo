@@ -31,7 +31,7 @@ class Passport extends CI_Controller {
         }
     }
 
-    public function set_login($name, $pwd, $expire_time = 0) {
+    public function set_login($name, $pwd) {
         $user_info = $this->operator_model->get_info_by_name($name);
         if ($user_info['pwd'] == $pwd) {
             $this->config->set_item('auth_login', true);
@@ -43,7 +43,7 @@ class Passport extends CI_Controller {
                 return false;
             }
             $cookie_name = $this->config->item('cookie_prefix') . 'auth';
-            setcookie($cookie_name, $my_auth, $expire_time, $this->config->item('cookie_path'), $this->config->item('cookie_domain'));
+            setcookie($cookie_name, $my_auth, time() + 1800, $this->config->item('cookie_path'), $this->config->item('cookie_domain'), false, true);
 
             return true;
         } else {
@@ -53,7 +53,7 @@ class Passport extends CI_Controller {
 
     public function logout(){
         $cookie_name = $this->config->item('cookie_prefix') . 'auth';
-        setcookie($cookie_name, '', - 86400 * 365, $this->config->item('cookie_path'), $this->config->item('cookie_domain'));
+        setcookie($cookie_name, '', - 86400, $this->config->item('cookie_path'), $this->config->item('cookie_domain'), false, true);
 
         redirect('passport/login?flag=1');
     }

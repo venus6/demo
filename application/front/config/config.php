@@ -158,7 +158,7 @@ $config['composer_autoload'] = 'vendor/autoload.php';
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
 */
-$config['permitted_uri_chars'] = 'a-z 0-9~%._';
+$config['permitted_uri_chars'] = 'a-z 0-9~._';
 
 /*
 |--------------------------------------------------------------------------
@@ -448,10 +448,10 @@ $config['global_xss_filtering'] = FALSE;
 | 'csrf_regenerate' = Regenerate token on every submission
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
-$config['csrf_protection'] = false;
-$config['csrf_token_name'] = 'csrf_test_name';
+$config['csrf_protection'] = true;
+$config['csrf_token_name'] = 'csrf_token_name';
 $config['csrf_cookie_name'] = 'csrf_cookie_name';
-$config['csrf_expire'] = 7200;
+$config['csrf_expire'] = 1800;
 $config['csrf_regenerate'] = TRUE;
 $config['csrf_exclude_uris'] = array();
 
@@ -524,3 +524,4 @@ $config['proxy_ips'] = '';
 
 /* add by venus */
 $config['public_url'] = $config['base_url'] . 'public/';
+date_default_timezone_set('Asia/ShangHai');

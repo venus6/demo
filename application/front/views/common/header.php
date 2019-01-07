@@ -11,6 +11,6 @@
 <link rel="stylesheet" href="<?php echo $this->config->item('public_url'); ?>css/front.css" type="text/css" media="screen, projection" />
 
 <script type="text/javascript" src="<?php echo $this->config->item('public_url'); ?>js/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="<?php echo $this->config->item('public_url'); ?>js/common.js"></script>
+<script type="text/javascript" src="<?php echo $this->config->item('public_url'); ?>js/common.js?t=<?php echo time(); ?>"></script>
 </head>
 <body>

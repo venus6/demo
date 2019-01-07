@@ -7,7 +7,7 @@ class Message_model extends CI_Model {
 
     public function pagination_message_list($page, $filter, $per_page) {
         $where = '1 ';
-        $order_by = '';
+        $order_by = 'order by add_time desc';
         if (isset($filter['name']) && $filter['name'] != '') {
             $where .= " and name like '%" . $filter['name'] . "%' ";
         }

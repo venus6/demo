@@ -14,6 +14,7 @@
                 <input type="text" name="email" id="email" size="50" maxlength="100" />
                 <label class="form_title" for="content">您对我们的留言 <span class="required">*</span></label>
                 <textarea name="content" id="content" cols="100" rows="10"></textarea>
+                <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
                 <div class="btnlist">
                     <a href="javascript:void(0);" onclick="check_form();" class="btn-normal"><b>保存</b></a>
                 </div>

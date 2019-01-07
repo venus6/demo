@@ -11,7 +11,8 @@
     <body style="background-color: #252639;">
         <div id="login_div">
             <h1>扬州捷科科技有限公司</h1>
-            <?php if ($flag == 1): ?>
+            <?php if ($flag == 0): ?>
+            <?php elseif ($flag == 1): ?>
             <div class="message">
                 <strong>恭喜</strong>，您已成功退出！
             </div>

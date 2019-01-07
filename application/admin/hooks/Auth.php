@@ -25,6 +25,10 @@ class Auth {
                 if ($user_info['pwd'] == $user_pwd) {
                     $this->CI->config->set_item('auth_login', true);
                     $this->CI->config->set_item('auth_user_info', $user_info);
+
+                    //给cookie延期
+                    $my_auth = auth_code($user_info['pwd'] . "\t" . $user_info['id'], 'ENCODE', md5($this->CI->config->item('auth_key')));
+                    setcookie($cookie_name, $my_auth, time() + 1800, $this->CI->config->item('cookie_path'), $this->CI->config->item('cookie_domain'), false, true);
                 } else {
                     $this->CI->config->set_item('auth_login', false);
                 }

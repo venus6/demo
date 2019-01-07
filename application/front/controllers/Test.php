@@ -3,7 +3,7 @@ class Test extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('test_model');
-        //$this->load->helper('url_helper');
+        //$this->load->helper('common');
     }
 
     public function index() {
@@ -42,7 +42,7 @@ class Test extends CI_Controller {
     }
 
     public function two() {
-        $data = array();
+        test111();echo 'venus';exit;
         $this->load->view('test/two', $data);
     }
 

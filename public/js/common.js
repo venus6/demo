@@ -138,9 +138,15 @@ Mui.form = {
     },
     send_form : function(formid) {
         show_tip_msg(2, '正在处理......');
-        $.post($('#' + formid).attr('action'), $('#' + formid).serializeArray(), function(data) {
+        /*$.post($('#' + formid).attr('action'), $('#' + formid).serializeArray(), function(data) {
             show_tip_msg(data.status, data.msg, data.front_op, data.data);
-        }, 'json');
+        }, 'json');*/
+
+        $.ajax({type: 'post', url: $('#' + formid).attr('action'), data: $('#' + formid).serializeArray(), dataType: 'json', success: function(data) {
+            show_tip_msg(data.status, data.msg, data.front_op, data.data);
+        }, error: function(XMLHttpRequest, textStatus, errorThrown) {
+            show_tip_msg(0, '出错啦！');
+        }});
     }
 };
 

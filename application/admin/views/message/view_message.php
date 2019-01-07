@@ -15,7 +15,7 @@
                 <tr>
                     <th>留言内容</th>
                     <td>
-                        <?php echo $message_info['content']; ?>
+                        <?php echo nl2br($message_info['content'], false); ?>
                     </td>
                 </tr>
                 <tr>

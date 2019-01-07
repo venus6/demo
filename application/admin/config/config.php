@@ -400,7 +400,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']	= 'yzjktech_';
+$config['cookie_prefix']	= 'demo_';
 $config['cookie_domain']	= '';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
@@ -526,3 +526,4 @@ $config['proxy_ips'] = '';
 $config['public_url'] = $config['base_url'] . 'public/';
 $config['auth_key']  = 'kjufd$jsdsdfsdf23_@d33!#';
 $config['fun_type'] = array('text_page'=>'单页', 'type_list'=>'子类别列表', 'content_list'=>'内容列表', 'cover_content_list'=>'封面内容列表', 'file_content_list'=>'文件内容列表', 'message'=>'留言', 'url_link_list'=>'链接列表');
+date_default_timezone_set('Asia/ShangHai');
