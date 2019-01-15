@@ -42,7 +42,9 @@ class Test extends CI_Controller {
     }
 
     public function two() {
-        test111();echo 'venus';exit;
+
+        var_dump(4 & 1);
+        exit;
         $this->load->view('test/two', $data);
     }
 
@@ -58,7 +60,8 @@ class Test extends CI_Controller {
         $redis = new Redis();
         $redis->connect('127.0.0.1', 6379);
         echo 'Connection to server sucessfully';
-        $res = $redis->get('one');
-        echo $res;
+        echo "Server is running: " . $redis->ping();
+        //$res = $redis->get('one');
+        //echo $res;
     }
 }
