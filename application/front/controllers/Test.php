@@ -59,7 +59,7 @@ class Test extends CI_Controller {
     public function redis() {
         $redis = new Redis();
         $redis->connect('127.0.0.1', 6379);
-        $list = $redis->lrange('word', 0, 5);
+        $list = $redis->keys("*");
         var_dump($list);
     }
 }
