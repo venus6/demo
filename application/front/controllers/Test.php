@@ -59,9 +59,7 @@ class Test extends CI_Controller {
     public function redis() {
         $redis = new Redis();
         $redis->connect('127.0.0.1', 6379);
-        echo 'Connection to server sucessfully';
-        echo "Server is running: " . $redis->ping();
-        //$res = $redis->get('one');
-        //echo $res;
+        $str = $redis->get('one');
+        var_dump($str);
     }
 }
