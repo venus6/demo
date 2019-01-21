@@ -42,8 +42,10 @@ class Test extends CI_Controller {
     }
 
     public function two() {
-
-        var_dump(4 & 1);
+        echo CI_VERSION;exit;
+        $input = array("Neo", "Morpheus", "Trinity", "Cypher", "Tank");
+        $rand_keys = array_rand($input, 2);
+        var_dump($rand_keys);
         exit;
         $this->load->view('test/two', $data);
     }
