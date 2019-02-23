@@ -31,6 +31,7 @@ class Test extends CI_Controller {
         if (is_cli()) {
             echo $id . '+venus!' . $name;
             //var_dump($argv);
+            //我的哈你叫呢长城哈
         } else {
             echo "It's not run in CLI!";
         }
@@ -42,10 +43,7 @@ class Test extends CI_Controller {
     }
 
     public function two() {
-        echo CI_VERSION;exit;
-        $input = array("Neo", "Morpheus", "Trinity", "Cypher", "Tank");
-        $rand_keys = array_rand($input, 2);
-        var_dump($rand_keys);
+        echo trim("\system/", '\/');
         exit;
         $this->load->view('test/two', $data);
     }
@@ -64,5 +62,24 @@ class Test extends CI_Controller {
         $redis->auth('venuscai');
         $list = $redis->keys("*");
         var_dump($list);
+    }
+
+    public function jquery() {
+        $data = [];
+        $this->load->view('test/jquery', $data);
+    }
+
+    public function jquery_ajax() {
+        echo json_encode($_POST);
+        //var_dump($_POST['fav']);
+    }
+
+    public function jquery2() {
+        $data = [];
+        $this->load->view('test/jquery2', $data);
+    }
+
+    public function session_test() {
+        echo 123;
     }
 }
